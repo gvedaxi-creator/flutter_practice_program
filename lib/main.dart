@@ -12,6 +12,7 @@ import 'package:vedaxi/TabBarExample.dart';
 import 'package:vedaxi/WhatsappTabBar.dart';
 
 import 'package:vedaxi/login/login_screen.dart';
+import 'package:vedaxi/news/news_screen.dart';
 
 import 'bottom_exp.dart';
 import 'checkBox.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: login_screen()
+      home: NewsScreen()
       // checkBox()
       //  InstagramLoginScreen()
 
