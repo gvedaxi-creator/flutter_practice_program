@@ -25,19 +25,19 @@ class _TreeScreenState extends State<TreeScreen> {
       body: Obx(
         () => controller.isLoading.value
             ? Center(child: CircularProgressIndicator())
-            : controller.treeDataList.isEmpty
-                ? Center(child: Text("No data found"))
-                : ListView.builder(
-                    itemCount: controller.treeDataList.length,
-                    itemBuilder: (context, index) {
-                      final data = controller.treeDataList[index];
-                      return ListTile(
-                        title: Text(data.name.toString()),
-                        subtitle: Text(data.description.toString()),
-                        leading: Image.network(data.image.toString()),
-                      );
-                    },
-                  ),
+            : controller.treeData.isEmpty
+            ? Center(child: Text("No data found"))
+            : ListView.builder(
+                itemCount: controller.treeData.length,
+                itemBuilder: (context, index) {
+                  final data = controller.treeData[index];
+                  return ListTile(
+                    title: Text(data.name.toString()),
+                    subtitle: Text(data.description.toString()),
+                    leading: Image.network(data.image.toString()),
+                  );
+                },
+              ),
       ),
     );
   }

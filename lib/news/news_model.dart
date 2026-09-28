@@ -78,16 +78,17 @@ class Articles {
   String? lang;
   Source? source;
 
-  Articles(
-      {this.id,
-        this.title,
-        this.description,
-        this.content,
-        this.url,
-        this.image,
-        this.publishedAt,
-        this.lang,
-        this.source});
+  Articles({
+    this.id,
+    this.title,
+    this.description,
+    this.content,
+    this.url,
+    this.image,
+    this.publishedAt,
+    this.lang,
+    this.source,
+  });
 
   Articles.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -98,8 +99,9 @@ class Articles {
     image = json['image'];
     publishedAt = json['publishedAt'];
     lang = json['lang'];
-    source =
-    json['source'] != null ? new Source.fromJson(json['source']) : null;
+    source = json['source'] != null
+        ? new Source.fromJson(json['source'])
+        : null;
   }
 
   Map<String, dynamic> toJson() {

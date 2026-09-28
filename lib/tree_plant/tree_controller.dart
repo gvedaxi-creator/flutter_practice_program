@@ -20,7 +20,9 @@ class TreeController extends GetxController {
     final respo = await api.tree(); // here tree is function name
 
     if (respo.responseCode.toString() == '1') {
-      treeData.value = respo.treePlant ?? []; // treePlant ni value null hoi sake etle default value set kari
+      treeData.value =
+          respo.treePlant ??
+          []; // treePlant ni value null hoi sake etle default value set kari
       isLoading.value = false;
     } else {
       isLoading.value = false;

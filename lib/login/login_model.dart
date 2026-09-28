@@ -36,14 +36,15 @@ class UserData {
   String? date;
   String? time;
 
-  UserData(
-      {this.id,
-        this.name,
-        this.surName,
-        this.email,
-        this.password,
-        this.date,
-        this.time});
+  UserData({
+    this.id,
+    this.name,
+    this.surName,
+    this.email,
+    this.password,
+    this.date,
+    this.time,
+  });
 
   UserData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
