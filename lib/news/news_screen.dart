@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:vedaxi/news/news_contoller.dart';
+import 'package:vedaxi/news/news_controller.dart';
 
 class NewsScreen extends StatefulWidget {
    NewsScreen({super.key});
@@ -10,24 +10,25 @@ class NewsScreen extends StatefulWidget {
 }
 
 class _NewsScreenState extends State<NewsScreen> {
- final NewsController contoller= Get.put(NewsController());
+ final NewsController controller= Get.put(NewsController());
 
   @override
-  void initstate()
-  {
+  void initState() {
+    // TODO: implement initState
     super.initState();
-    contoller.newsCont();
+    controller.newsCont();
   }
+
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(()=> contoller.isLoading.value
+      body: Obx(()=> controller.isLoading.value
           ? Center(child: CircularProgressIndicator())
-          :contoller.newsData.isEmpty
+          :controller.newsData.isEmpty
           ?Center(child: Text("No data found"))
           :ListView.builder(
-        itemCount: contoller.newsData.length,
+        itemCount: controller.newsData.length,
         itemBuilder: (context, index){
-          final data=contoller.newsData[index];
+          final data=controller.newsData[index];
           return ListTile(
             title: Text(data.title.toString()),
             subtitle: Text(data.source?.name.toString() ?? ""),
