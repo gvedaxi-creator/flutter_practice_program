@@ -4,6 +4,7 @@ import 'package:vedaxi/AdminDashboardDesign.dart';
 import 'package:vedaxi/BottomNavigationExample.dart';
 import 'package:vedaxi/GridViewExample.dart';
 import 'package:vedaxi/InstagramLoginScreen.dart';
+import 'package:vedaxi/LoanMobileApplication/ApplyLoan.dart';
 import 'package:vedaxi/MyAppointmentsDesign.dart';
 import 'package:vedaxi/SettingsUi.dart';
 import 'package:vedaxi/SnackBarExample.dart';
@@ -52,7 +53,10 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: NewsScreen(),
+      home: Applyloan()
+      // login_screen()
+
+      // NewsScreen(),
       // checkBox()
       //  InstagramLoginScreen()
 
